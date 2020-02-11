@@ -1,8 +1,8 @@
 <template>
     <div class="login">
         <h3>Sign In</h3>
-        <input type="text" v-model="email" placeholder="Email">
-        <input type="password" v-model="password" placeholder="Password">
+        <input type="text" v-model="email" placeholder="Email"><br>
+        <input type="password" v-model="password" placeholder="Password"><br>
         <button @click="login">Connection</button>
         <p>You don't have an account ? You can <router-link to="/sign-up"> create one</router-link></p>
     </div>
@@ -44,9 +44,9 @@ input {
 }
 
 button {
-    margin-top: 20px;
-    width: 10%;
-    cursor: pointer;
+	margin-top: 10px;
+	width: 10%;
+	cursor: pointer;
 }
 
 p {
