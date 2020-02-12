@@ -1,7 +1,11 @@
 import Vue from 'vue'
+import VueGoogleCharts from 'vue-google-charts'
 import firebase from 'firebase'
+import 'firebase/firestore';
 import App from './App.vue'
 import router from './router'
+
+Vue.use(VueGoogleCharts)
 
 Vue.config.productionTip = false
 
@@ -25,3 +29,11 @@ firebase.auth().onAuthStateChanged(() => {
 		}).$mount('#app')
 	}
 });
+
+//var database = firebase.firestore();
+
+/*database.collection("answers").get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data().answer}`);
+  })
+})*/
