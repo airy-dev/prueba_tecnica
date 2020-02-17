@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import SignUp from '@/views/SignUp.vue'
+import chart from '@/views/Chart.vue'
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,14 @@ const routes = [
     name: 'Login',
     component: Login
   },
+  {
+    path: '/chart',
+    name: 'chart',
+    component: chart,
+    meta: {
+      requiresAuth: true
+    }
+  },  
   {
     path: '/sign-up',
     name: 'SignUp',

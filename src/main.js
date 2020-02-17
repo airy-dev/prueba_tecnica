@@ -29,11 +29,3 @@ firebase.auth().onAuthStateChanged(() => {
 		}).$mount('#app')
 	}
 });
-
-//var database = firebase.firestore();
-
-/*database.collection("answers").get().then((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data().answer}`);
-  })
-})*/

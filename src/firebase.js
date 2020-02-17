@@ -1,5 +1,7 @@
-import firebase from 'firebase'
-import firestore from 'firebase/firestore'
+import firebase from 'firebase/app';
+//import * as firebase from "firebase";
+//import 'firebase/firestore';
+import '@firebase/database';
 
 const config = {
   apiKey: "AIzaSyBzbpaY992WAite5cSgK4AuKu3K48-Tpd4",
@@ -11,8 +13,7 @@ const config = {
   appId: "1:836418149293:web:b9554af817dfed7cd81f24"
 };
 
-const firebaseApp = firebase.initializeApp(config);
+const firebaseApp = firebase.initializeApp(config,"Secondary");
 
-firebaseApp.firestore().settings({timestampsInSnapshots: true})
-
-export default firebaseApp.firestore()
+//export default firebaseApp.firestore()
+export default firebaseApp.database()
